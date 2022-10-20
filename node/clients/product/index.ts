@@ -17,4 +17,8 @@ export class ProductClient extends ExternalClient {
   public async products(): Promise<Product[]> {
     return await this.http.get(`/products`)
   }
+
+  public async product(id: number): Promise<Product> {
+    return await this.http.get(`/products/${id}`)
+  }
 }

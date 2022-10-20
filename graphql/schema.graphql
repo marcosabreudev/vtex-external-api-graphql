@@ -39,6 +39,7 @@ type Query {
 
   # fake store api
   products: [Product]
+  product(id: ID!): Product
 
   """
   Returns a markdown source given an id
