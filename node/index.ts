@@ -13,6 +13,7 @@ import { total } from './resolvers/total'
 
 import { products } from './resolvers/products'
 import { product } from './resolvers/product'
+import { editProduct } from './resolvers/editProduct'
 
 const MEDIUM_TIMEOUT_MS = 2 * 1000
 
@@ -40,6 +41,8 @@ export default new Service<Clients, RecorderState, ParamsContext>({
         delete: deleteBook,
         editBook,
         newBook,
+
+        editProduct
       },
       Query: {
         book,

@@ -1,7 +1,7 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
-import type { Product } from '../../typings/custom'
+import type { Product, ProductInput } from '../../typings/custom'
 
 export class ProductClient extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
@@ -20,5 +20,12 @@ export class ProductClient extends ExternalClient {
 
   public async product(id: number): Promise<Product> {
     return await this.http.get(`/products/${id}`)
+  }
+
+  public async editProduct(id: number, product: ProductInput): Promise<any> {
+    return await this.http.put(`/products/${id}`, {
+      id,
+      ...product
+    })
   }
 }

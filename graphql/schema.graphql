@@ -22,6 +22,14 @@ type Rating {
   count: Int
 }
 
+input ProductInput {
+  title: String
+  price: Float
+  description: String
+  image: String
+  category: String
+}
+
 # It is necessary to generate input types for creating books
 # ref: http://graphql.org/graphql-js/mutations-and-input-types/
 input BookInput {
@@ -52,4 +60,6 @@ type Mutation {
   delete(id: String): Boolean
   editBook(id: ID!, book: BookInput!): Book
   newBook(book: BookInput!): Book
+
+  editProduct(id: ID!, product: ProductInput): Product
 }

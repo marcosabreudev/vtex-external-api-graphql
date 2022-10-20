@@ -28,3 +28,11 @@ interface Rating {
   rate: number,
   count: number
 }
+
+export interface ProductInput {
+  title: Product['title']
+  price: Product['price']
+  description: Product['description']
+  image: Product['image']
+  category: Product['category']
+}
