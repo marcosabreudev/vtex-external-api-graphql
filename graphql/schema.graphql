@@ -25,6 +25,7 @@ type Query {
   # books(from: Int = 0, to: Int = 4): [Book] @cacheControl(scope: PUBLIC, maxAge: SHORT)
   products: [Product]
   product(id: ID!): Product
+  rangeProducts(limit: Int = 10): [Product]
 }
 
 type Mutation {

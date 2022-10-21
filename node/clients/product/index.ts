@@ -22,6 +22,10 @@ export class ProductClient extends ExternalClient {
     return await this.http.get(`/products/${id}`)
   }
 
+  public async rangeProducts(limit: number): Promise<Product[]> {
+    return await this.http.get(`/products?limit=${limit}`)
+  }
+
   public async editProduct(id: number, product: ProductInput): Promise<any> {
     return await this.http.put(`/products/${id}`, {
       id,

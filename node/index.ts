@@ -5,6 +5,7 @@ import { Clients } from './clients'
 
 import { products } from './resolvers/products'
 import { product } from './resolvers/product'
+import { rangeProducts } from './resolvers/rangeProducts'
 import { editProduct } from './resolvers/editProduct'
 
 const MEDIUM_TIMEOUT_MS = 2 * 1000
@@ -31,7 +32,8 @@ export default new Service<Clients, RecorderState, ParamsContext>({
       },
       Query: {
         products,
-        product
+        product,
+        rangeProducts
       },
     },
   },
