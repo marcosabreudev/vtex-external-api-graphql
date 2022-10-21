@@ -11,3 +11,19 @@ mutation editProductById {
     category
   }
 }
+
+{
+  product(id: 1) {
+    title
+    price
+    category
+  }
+}
+
+{
+  products {
+    title
+    price
+    category
+  }
+}
