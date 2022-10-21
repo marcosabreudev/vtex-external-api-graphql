@@ -27,3 +27,12 @@ mutation editProductById {
     category
   }
 }
+
+{
+  rangeProducts(limit: 10) {
+    title
+    price
+    category
+    description
+  }
+}
